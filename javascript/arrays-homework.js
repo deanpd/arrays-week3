@@ -1,6 +1,11 @@
 //Create an array.
 var colorList = ["Red", "Black", "White", "Blue", "Green", "Purple", "Orange", "Pantone", "CMYK"];
 
+var textListA = new Array();
+textListA[0] = "<h3>&lt;div&gt;challenge&lt;&sol;div&gt;</h3>";
+textListA[1] = "<h4>&lt;div&gt;challenge&lt;&sol;div&gt;</h4>";
+textListA[2] = "<h5>&lt;div&gt;challenge&lt;&sol;div&gt;</h5>";
+
 var imageListWC = new Array();
 imageListWC[0] = "images/watercolor/thumbs/artwork_1.jpg";
 imageListWC[1] = "images/watercolor/thumbs/artwork_2.jpg";
@@ -51,7 +56,7 @@ imageListDraw[23] = "images/drawing/thumbs/artwork_24.jpg";
 imageListDraw[24] = "images/drawing/thumbs/artwork_25.jpg";
 
 function buildThumbnails()
-{
+{    
   //WATERCOLOR
   var thumbsDivWC = document.getElementById("thumbs-wc");
   var output = "";
@@ -64,20 +69,29 @@ function buildThumbnails()
   //OIL
   var thumbsDivOil = document.getElementById("thumbs-oil");
   var output = "";
-  for(var i=0; i < imageListOil.length; i++)
+  for(var j=0; j < imageListOil.length; j++)
     {
-      output += '<img src="' + imageListOil[i] + '" />';
+      output += '<img src="' + imageListOil[j] + '" />';
     }
   thumbsDivOil.innerHTML = output;
   
   //DRAWING
   var thumbsDivDraw = document.getElementById("thumbs-draw");
   var output = "";
-  for(var i=0; i < imageListDraw.length; i++)
+  for(var k=0; k < imageListDraw.length; k++)
     {
-      output += '<img src="' + imageListDraw[i] + '" />';
+      output += '<img src="' + imageListDraw[k] + '" />';
     }
   thumbsDivDraw.innerHTML = output;
+  
+  //DIV CHALLENGE
+  var textDivA = document.getElementById("div-challenge");
+  var output = "";
+  for(var l=0; l < textListA.length; l++)
+    {
+      output += '<div>' + textListA[l] + '</div>';
+    }
+  textDivA.innerHTML = output;
 }
 
 window.onload = function()

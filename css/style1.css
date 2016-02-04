@@ -75,7 +75,7 @@ nav li{
 }
 
 /* set multiple elements at the same time...... **/
-h2, h3, h4, p, table, img{
+h2, h3, h4, h5, p, table, img{
 	padding: 1em 1.2em 0 2em;
 	margin:0;
 }
